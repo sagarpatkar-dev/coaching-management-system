@@ -1,7 +1,7 @@
 export default function AllInfo() {
     return (
         <div>
-            <h1>All Information Page</h1>
+            <h1>Good Morning Sagar</h1>
         </div>
     )
 }
