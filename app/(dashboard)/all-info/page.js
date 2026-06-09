@@ -1,7 +1,8 @@
+import Introduction from "@/components/client/dashboard/Introduction";
 export default function AllInfo() {
     return (
         <div>
-            <h1>Good Morning Sagar</h1>
+            <Introduction />
         </div>
     )
 }
