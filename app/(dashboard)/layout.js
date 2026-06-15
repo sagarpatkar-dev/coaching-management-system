@@ -1,9 +1,8 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import SidebarNav from "@/components/client/sidebar-nav/sidebar";
 
 export default function DashboardLayout({ children }) {
     return (
-        <SidebarProvider>
             <div className="flex w-full h-screen">
                 <SidebarNav />
                 <main className="flex-1 w-full">
@@ -11,6 +10,5 @@ export default function DashboardLayout({ children }) {
                     <div className="py-2 px-6">{children}</div>
                 </main>
             </div>
-        </SidebarProvider>
     );
 }
