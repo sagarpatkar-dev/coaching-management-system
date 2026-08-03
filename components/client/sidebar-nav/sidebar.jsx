@@ -1,5 +1,6 @@
 "use client"
 import {useState} from "react";
+import Image from "next/image";
 import {
     Sidebar,
     SidebarContent,
@@ -19,19 +20,20 @@ export default function SidebarNav() {
         setCurrentMenu(menu);
     }
     return (
-        <Sidebar className="border-r border-slate-800 bg-[#07111f] text-slate-200">
-            <SidebarHeader className="border-b border-slate-800 px-4 py-5">
-                <h2 className="text-lg font-bold text-white">Football Coach</h2>
-                <p className="text-sm text-slate-400">Admin Dashboard</p>
+        <Sidebar className="border-r border-slate-800 bg-[#ffff] text-slate-200 px-4 py-5">
+            <SidebarHeader className="border-b border-slate-800 w-full">
+                {/*<h2 className="text-lg font-bold text-white">Football Coach</h2>*/}
+                {/*<p className="text-sm text-slate-400">Admin Dashboard</p>*/}
+                <Image src="/images/EliteLogo.png" alt="Elite Logo" width={100} height={40} className="bg-white"/>
             </SidebarHeader>
 
-            <SidebarContent className="px-3 py-4">
+            <SidebarContent className="">
                 <SidebarGroup>
                     <SidebarGroupLabel className="text-slate-500">
                         Main Menu
                     </SidebarGroupLabel>
                     <SidebarMenu className="mt-3 space-y-2">
-                        {menuName && menuName.length !== 0 && menuName.map((item, index) => (
+                        {menuName && menuName.length !== 0 && menuName.map((item) => (
                             <SidebarMenuItem key={item}>
                                 <SidebarMenuButton onClick={() => menuIconClick(item)} className={`${currentMenu === item ? "bg-emerald-600 hover:bg-emerald-700 text-white" : "text-slate-400 hover:bg-slate-800 hover:text-white"} rounded-lg cursor-pointer`}>
                                     {menuButton(item)}
